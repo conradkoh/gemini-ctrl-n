@@ -22,8 +22,10 @@ The main script is located at: [`src/script.js`](src/script.js)
 Arc Browser has built-in support for custom scripts through **Boosts**:
 
 1. **Open Gemini** in Arc Browser (`gemini.google.com`)
-2. **Right-click** on the page and select **"New Boost for this site"**
-3. **Choose "Custom"** boost type
+2. **Create a new boost** using either method:
+   - Press `Cmd + T` and select **"New Boost"**
+   - Click the **dustpan icon** in the Site Control Center
+3. **Choose "Code {}"** followed by **JS**
 4. **Copy the script** from [`src/script.js`](src/script.js)
 5. **Paste it** into the boost editor
 6. **Save** the boost
@@ -31,29 +33,32 @@ Arc Browser has built-in support for custom scripts through **Boosts**:
 
 ### For Chrome, Edge, Brave, and Other Browsers
 
-Use a userscript manager like Tampermonkey:
+Use a userscript manager like Violentmonkey:
 
-#### Step 1: Install Tampermonkey
+#### Step 1: Install Violentmonkey
 
-- **Chrome**: [Install from Chrome Web Store](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
-- **Edge**: [Install from Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd)
-- **Firefox**: [Install from Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/)
+- **Chrome**: [Install from Chrome Web Store](https://chrome.google.com/webstore/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag)
+- **Edge**: [Install from Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/violentmonkey/eeagobfjdenkkddmbclomhiblgggliao)
+- **Firefox**: [Install from Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/violentmonkey/)
 
 #### Step 2: Create the Userscript
 
-1. **Click** the Tampermonkey extension icon
+1. **Click** the Violentmonkey extension icon
 2. **Select** "Create a new script"
 3. **Replace** the default template with this:
 
 ```javascript
 // ==UserScript==
-// @name         Gemini New Chat Hotkey
-// @namespace    http://tampermonkey.net/
-// @version      1.0
-// @description  Add Ctrl+N hotkey for new chat in Gemini
-// @author       You
-// @match        https://gemini.google.com/*
-// @grant        none
+// @name        Gemini New Chat Hotkey
+// @namespace   https://github.com/your-username/gemini-ctrl-n
+// @match       https://gemini.google.com/*
+// @grant       none
+// @version     1.0
+// @author      Your Name
+// @description Add keyboard shortcuts (Ctrl+M, Ctrl+N/Ctrl+Shift+N) for creating new chats in Gemini AI
+// @homepage    https://github.com/your-username/gemini-ctrl-n
+// @supportURL  https://github.com/your-username/gemini-ctrl-n/issues
+// @license     MIT
 // ==/UserScript==
 
 // Paste the contents of src/script.js here
