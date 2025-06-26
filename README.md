@@ -54,7 +54,7 @@ Use a userscript manager like Violentmonkey:
 // @match       https://gemini.google.com/*
 // @grant       none
 // @version     1.0
-// @author      Your Name
+// @author      Conrad Koh
 // @description Add keyboard shortcuts (Ctrl+M, Ctrl+N/Ctrl+Shift+N) for creating new chats in Gemini AI
 // @homepage    https://github.com/your-username/gemini-ctrl-n
 // @supportURL  https://github.com/your-username/gemini-ctrl-n/issues
